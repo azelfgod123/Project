@@ -15,8 +15,8 @@
 
 <script src="https://kit.fontawesome.com/ab7a215c3c.js" crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.js"></script>
 
 <!----------------------------------------------->
 
