@@ -1,0 +1,43 @@
+
+.container1{
+      width: 700px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: blue;
+}
+
+
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #BA68C8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}
+.col {
+    border: 1px solid black;
+}
+ .closer {
+  width: 100%;
+  overflow: auto;
+}
+ .closer i {
+  float: right;
+  font-size: 30px;
+  color: #BDBEC2;
+  cursor: pointer;
+}
+ .closer i:hover {
+  color: #8E8E93;
+}

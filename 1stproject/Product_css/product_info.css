@@ -1,0 +1,82 @@
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "https://fonts.googleapis.com/css?family=Passion+One:400,700";
+@import "https://fonts.googleapis.com/css?family=Overlock:400,700";
+body {
+ 
+  background: linear-gradient(#2B2B2B, #4A4A4A);
+  color: #8E8E93;
+
+  line-height: 18px;
+}
+
+h1, h2 {
+  font-family: "Passion One";
+  color: #1F1F21;
+
+}
+
+.product_container {
+  width: 650px;
+  margin: 5% auto;
+  padding: 30px;
+  background: #FFFFFF;
+  border: 1px solid #C7C7CC;
+  box-sizing: border-box;
+  border-radius: 1px;
+}
+.product_container .closer {
+  width: 100%;
+  overflow: auto;
+}
+.product_container .closer i {
+  float: right;
+  font-size: 30px;
+  color: #BDBEC2;
+  cursor: pointer;
+}
+.product_container .closer i:hover {
+  color: #8E8E93;
+}
+
+.product_container .product_info {
+  width: 60%;
+  padding: 0 30px;
+}
+
+.product_container .clear {
+  clear: both;
+}
+.product_container .product_footer {
+  margin-top: 60px;
+  padding-top: 60px;
+  border-top: 1px solid #C7C7CC;
+}
+.product_container .product_footer .col-1-2 {
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+.product_container .product_footer h2 {
+  margin-top: 0;
+}
+.product_container .product_footer ul {
+  padding-top: 0;
+  padding-left: 0;
+}
+.product_container .product_footer ul li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+.product_container .product_footer table {
+  border-collapse: collapse;
+}
+.product_container .product_footer table tr th {
+  border-bottom: 1px solid #C7C7CC;
+}
+.product_container .product_footer table tr th, .product_container .product_footer table tr td {
+  padding: 5px 10px;
+}
+.btn1 {
+  background: #40B5BC;
+}
