@@ -423,7 +423,7 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
 </nav>
     </div>
       <div class="mx-3">
-        <a href="#" style="text-decoration: none;"><div class="wrap"><button class="button">ADD CUSTOMER</button></div>
+        <a href="Customer_Insert.php" style="text-decoration: none;"><div class="wrap"><button class="button">ADD CUSTOMER</button></div>
           </a>
       </div>
 

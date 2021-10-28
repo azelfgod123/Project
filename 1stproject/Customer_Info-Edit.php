@@ -212,22 +212,26 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
             <div class="p-3 py-4">
 
                     
-                    <div class="p-3 bg-light fw-bold text-black"><i class="fas fa-info-circle mr-1"></i> INSERTING NEW CUSTOMER</div>
+                    <div class="p-3 bg-light fw-bold text-black"><i class="fas fa-info-circle mr-1"></i> CUSTOMER UPDATE</div>
 
               
                 <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Customer Name</label><input type="text" class="form-control" name="" placeholder="Name" value=""></div>
+                    <div class="col-md-6"><label class="labels">Customer Name</label><input type="text" class="form-control" name="" placeholder="name" value=""></div>
 
 
                 </div>
                 <div class="row mt-3">
                     
-                    <div class="col-md-12"><label class="labels">Contact Number</label><input type="text" name="" class="form-control" placeholder="Enter contact number" value=""></div>
+                    <div class="col-md-12"><label class="labels">Contact Number</label><input type="text" name="" class="form-control" placeholder="enter contact number" value=""></div>
                     
-                    <div class="col-md-12"><label class="labels">Address </label><input type="text" class="form-control" name="" placeholder="Enter address line " value=""></div>
+                    <div class="col-md-12"><label class="labels">Address </label><input type="text" class="form-control" name="" placeholder="enter address line " value=""></div>
                                       
                                   
                     <div class="col-md-12"><label class="labels">Email Address</label><input type="text" class="form-control" name="" placeholder="enter email id" value=""></div>
+
+                    <div class="col-md-12"><label class="labels">Status</label><input type="text" class="form-control" name="" placeholder="customer status" value=""></div>
+
+                    <div class="col-md-12"><label class="labels">Remarks</label><input type="text" class="form-control" name="" placeholder="customer remarks" value=""></div>
 
 
                     
@@ -241,7 +245,11 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
                 <center>
                   <span class="icon-input-btn mt-5">
                     <i class="fas fa-file-upload text-white"></i> 
-                    <input type="submit" name="" class="btn btn1  text-white " value="SAVE">
+                    <input type="submit" name="" class="btn btn1  text-white " value="UPDATE">
+                  </span>
+                  <span class="icon-input-btn mt-4">
+                  <i class="fas fa-trash text-white"></i>
+                    <input type="submit" name="" class="btn btn-danger text-white " value="DELETE">
                   </span>
                 </center>
                 
