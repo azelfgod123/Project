@@ -1,0 +1,65 @@
+body{
+    background: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: 1300px 520px;
+
+}
+.card{
+    height: 370px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 350px;
+    background-color: white !important;
+    }
+    
+    
+    
+    .input-group-prepend span{
+    width: 50px;
+    background: rgb(126,224,255);
+    background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50%, rgba(105,255,203,1) 100%);
+    color: black;
+    border:0 !important;
+    color: white;
+    height: 37px;
+    }
+    
+    input:focus{
+    outline: 0 0 0 0  !important;
+    box-shadow: 0 0 0 0 !important;
+    }
+    
+    
+    .login_btnn{
+    color: black;
+    background: rgb(126,224,255);
+    background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50%, rgba(105,255,203,1) 100%);
+    width: 200px;
+    border: none;
+    height: 40px;
+    color: white;
+    
+    }
+    
+    .login_btnn:hover{
+    color: black;
+    background: rgb(126,224,255);
+    background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50%, rgba(105,255,203,1) 100%);
+    color: white;
+    
+    }
+    
+    .links{
+    color: white;
+    }
+    
+    .links a{
+    margin-left: 4px;
+    }
+    .fas{
+        font-size: 15px;
+    }
+    
+    
+
+
