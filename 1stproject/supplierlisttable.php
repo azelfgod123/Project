@@ -257,19 +257,14 @@ function closeNav() {
 
 	<!----------------Header----------------------------------------------------->
 
-<nav class="navbar navbar-light  fixed-top " style="background: rgb(126,224,255);
-background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50%, rgba(105,255,203,1) 100%);">
 
+  <nav class="navbar navbar-light  fixed-top " style="background: rgb(126,224,255);
+background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50%, rgba(105,255,203,1) 100%);">
   <div class="container-fluid" >
 
-  	<a class="navbar-brand fw-bold text-white" href="#">FURNITURE HUB <i class="fab fa-accusoft"></i></a>
+  	<a class="navbar-brand fw-bold text-white" href="homepage.php">FURNITURE HUB <i class="fab fa-accusoft"></i></a>
 
-  	<ul class="my-auto ">
-       
-       <a class="navbar-brand fs-6 text-white active" href="homepage.php">HOMEPAGE</a>
-       <a class="navbar-brand fs-6 text-white" href="#">ABOUT</a>
-       <a class="navbar-brand fs-6 text-white" href="#">SERVICES</a>
-   </ul>
+  	
    
   
  
@@ -279,15 +274,9 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
     </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Dashboard 
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">FURNITURE HUB <i class="fab fa-accusoft"></i>
 
-          <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
-            <lord-icon
-                src="https://cdn.lordicon.com/nocovwne.json"
-                trigger="loop"
-                colors="primary:#121331,secondary:#08a88a"
-                style="width:40px;height:40px">
-            </lord-icon>
+        
 
         </h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -299,17 +288,7 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
 
           	 <hr / style="color:#08f26e">
 
-            <a class="nav-link active fw-bold mt-4" aria-current="page" href="#">GRAPH 
-
-              <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
-              <lord-icon
-                  src="https://cdn.lordicon.com/fgkmrslx.json"
-                  trigger="hover"
-                  colors="primary:#121331,secondary:#08a88a"
-                  style="width:40px;height:40px">
-              </lord-icon>
-
-            </a>
+            
 
           </li>
           <li class="nav-item">
@@ -353,16 +332,16 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
 
             </a>
           </li>
-          <li class="nav-item">
+           <li class="nav-item">
             <a  class="nav-link text-black" href="Producttable.php">PRODUCT LIST 
 
-             <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
-                <lord-icon
-                    src="https://cdn.lordicon.com/wxnxiano.json"
-                    trigger="hover"
-                    colors="primary:#121331,secondary:#08a88a"
-                    style="width:40px;height:40px">
-                </lord-icon>
+            <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+            <lord-icon
+                src="https://cdn.lordicon.com/nocovwne.json"
+                trigger="loop"
+                colors="primary:#121331,secondary:#08a88a"
+                style="width:40px;height:40px">
+            </lord-icon>
 
 
             </a>
@@ -382,7 +361,6 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
             </a>
           </li>
 
-
          <hr class="mt-2" style="color:#08f26e">
           <li class="nav-item">
           	<a class="nav-link text-black" href="Login.php">LOGOUT <i class="fas fa-sign-out-alt ms-2" id="dashicon"></i></a>
@@ -394,6 +372,7 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
     </div>
   </div>
 </nav>
+
 
 <!------------------------------------------------------------------------------>
 

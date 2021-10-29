@@ -15,7 +15,7 @@ if ($result->num_rows > 0)
     {
       if($row["user_type"] == 'admin')
       {
-        echo "<script> window.location.href='http://localhost/PROJECT/Project/1stproject/homepage.php' </script>  ";
+        echo "<script> window.location.href='http://localhost/Project/1stproject/homepage.php' </script>  ";
         header("Location: {$url}");
         exit;
       }
