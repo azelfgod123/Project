@@ -15,6 +15,9 @@
 
 <script src="https://kit.fontawesome.com/ab7a215c3c.js" crossorigin="anonymous"></script>
 
+<script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.js"></script>
+
 <!----------------------------------------------->
 
 <style>
@@ -235,7 +238,7 @@ table .lock{
   $('table tr').click(function(){
     var id = $(this).attr('row_id');
     var id2 = $(this).attr('row_id2');
-    window.open("http://localhost/project/productupdate.php?id=" + id + "&Acc_ID=" + id2);
+    window.open("http://localhost/Project/1stproject/Customer_Info-Edit.php?id=" + id + "&Acc_ID=" + id2);
   });
 }); 
 
