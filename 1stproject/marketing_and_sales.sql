@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 29, 2021 at 03:10 PM
+-- Generation Time: Oct 29, 2021 at 03:24 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -61,6 +61,7 @@ CREATE TABLE `employee_tbl` (
   `Address` text NOT NULL,
   `ContactNos` varchar(25) NOT NULL,
   `EmailAddress` text NOT NULL,
+  `username` varchar(250) NOT NULL,
   `Password` varchar(250) NOT NULL,
   `BloodType` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -69,9 +70,9 @@ CREATE TABLE `employee_tbl` (
 -- Dumping data for table `employee_tbl`
 --
 
-INSERT INTO `employee_tbl` (`EncoderID`, `FirstName`, `MidName`, `LastName`, `BirthDate`, `Gender`, `Address`, `ContactNos`, `EmailAddress`, `Password`, `BloodType`) VALUES
-(2456, 'Christian', 'Genilo', 'Cullados', '2011-05-09', 'male', 'imus cavite', '6787754', 'cgc@gmail.com', '', 'o+'),
-(3001, 'Moy', 'Moy', 'Capistrano', '2011-01-31', '', 'Las pinas city', '56441', 'moy@gmail.com', '', 'AB-');
+INSERT INTO `employee_tbl` (`EncoderID`, `FirstName`, `MidName`, `LastName`, `BirthDate`, `Gender`, `Address`, `ContactNos`, `EmailAddress`, `username`, `Password`, `BloodType`) VALUES
+(2456, 'Christian', 'Genilo', 'Cullados', '2011-05-09', 'male', 'imus cavite', '6787754', 'cgc@gmail.com', '', '', 'o+'),
+(3001, 'Moy', 'Moy', 'Capistrano', '2011-01-31', '', 'Las pinas city', '56441', 'moy@gmail.com', '', '', 'AB-');
 
 -- --------------------------------------------------------
 
@@ -131,7 +132,7 @@ CREATE TABLE `product_tbl` (
 --
 
 INSERT INTO `product_tbl` (`ProductID`, `ProductName`, `Description`, `Category`, `Status`, `Price`, `Unit`) VALUES
-(6849, 'Premium Sofa bed', 'Sofa made in Paraguay. Delicate to the body and dedicated to cater your needs.', 'Sofa', 'Ready', '16000', 'PESO');
+(6849, 'Premium Sofa sheet', 'Sofa made in Paraguay. Delicate to the body and dedicated to cater your needs.', 'Sofa', 'Ready', '16000', 'PESO');
 
 -- --------------------------------------------------------
 
