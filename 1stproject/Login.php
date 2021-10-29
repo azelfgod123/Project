@@ -1,3 +1,38 @@
+<?php
+include 'connection.php';
+
+
+if(isset($_POST["login-btn"]))
+{
+$username = $_POST["uname"];
+$password = $_POST["pw"];
+
+$sql = "SELECT * FROM employee_tbl WHERE username = '$username' AND Password = '$password'";
+$result = $db->query($sql);
+if ($result->num_rows > 0)
+  {
+    while ($row = $result->fetch_assoc())
+    {
+      if($row["user_type"] == 'admin')
+      {
+        echo "<script> window.location.href='http://localhost/PROJECT/Project/1stproject/homepage.php' </script>  ";
+        header("Location: {$url}");
+        exit;
+      }
+      else
+      {
+        echo "Invalid user account. Contact your Administrator!";
+        exit;
+      }
+    }
+  $db->close();
+  }
+
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,25 +92,25 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
 
 				<!----------------------------------------------------------------------------------------form------------------------------------->
 
-				<form method="POST">
+				<form method="post">
 
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text justify-content-center"><i class="fas fa-user "></i></span>
 						</div>
-						<input type="text" name = "" class="form-control mb-4" placeholder="username"  required>
+						<input type="text" name = "uname" class="form-control mb-4" placeholder="username"  required>
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text justify-content-center"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" name = "" class="form-control mb-5" placeholder="password"  required>
+						<input type="password" name = "pw" class="form-control mb-5" placeholder="password"  required>
 					</div>
 				
 					<div class="form-group">
 						<div class="d-flex justify-content-center mt-3 login_container">
-						<input type="submit" name = "" value="Login" class="btnn float-right login_btnn">
+						<input type="submit" name = "login-btn" value="Login" class="btnn float-right login_btnn">
 						</div>
 					</div>
 
