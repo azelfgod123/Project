@@ -269,7 +269,7 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
 
   	<ul class="my-auto ">
        
-       <a class="navbar-brand fs-6 text-white active">HOMEPAGE</a>
+       <a class="navbar-brand fs-6 text-white active" href="homepage.php">HOMEPAGE</a>
        <a class="navbar-brand fs-6 text-white" href="#">ABOUT</a>
        <a class="navbar-brand fs-6 text-white" href="#">SERVICES</a>
    </ul>
@@ -316,7 +316,7 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
 
           </li>
           <li class="nav-item">
-            <a class="nav-link text-black"  href="#">ORDER LIST 
+            <a class="nav-link text-black"  href="orderlisttable.php">ORDER LIST 
 
               <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
                 <lord-icon
@@ -329,7 +329,7 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
             </a>
           </li>
            <li class="nav-item">
-            <a class="nav-link text-black" href="#">CUSTOMER LIST
+            <a class="nav-link text-black" href="customertable.php">CUSTOMER LIST
 
                 <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
                 <lord-icon
@@ -343,7 +343,7 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
             </a>
           </li>
            <li class="nav-item">
-            <a  class="nav-link text-black" href="#">SUPPLIER LIST 
+            <a  class="nav-link text-black" href="supplierlisttable.php">SUPPLIER LIST 
 
               <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
                   <lord-icon
@@ -357,7 +357,7 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
             </a>
           </li>
           <li class="nav-item">
-            <a  class="nav-link text-black" href="#">PRODUCT LIST 
+            <a  class="nav-link text-black" href="Producttable.php">PRODUCT LIST 
 
              <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
                 <lord-icon
@@ -371,7 +371,7 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
             </a>
           </li>
              <li class="nav-item">
-            <a  class="nav-link text-black" href="#">EMPLOYEE LIST 
+            <a  class="nav-link text-black" href="employeetable.php">EMPLOYEE LIST 
 
            <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
               <lord-icon
@@ -388,7 +388,7 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
 
          <hr class="mt-2" style="color:#08f26e">
           <li class="nav-item">
-          	<a class="nav-link text-black" href="#">LOGOUT <i class="fas fa-sign-out-alt ms-2" id="dashicon"></i></a>
+          	<a class="nav-link text-black" href="Login.php">LOGOUT <i class="fas fa-sign-out-alt ms-2" id="dashicon"></i></a>
           </li>
           
         </ul>
