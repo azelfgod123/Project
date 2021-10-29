@@ -21,7 +21,7 @@ if ($result->num_rows > 0)
       }
       else
       {
-        echo "Invalid user account. Contact your Administrator!";
+        echo "<script>alert('Invalid user account. Contact your Administrator!')</script>";
         exit;
       }
     }
