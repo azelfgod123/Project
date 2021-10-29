@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 29, 2021 at 03:24 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.11
+-- Generation Time: Oct 29, 2021 at 04:23 PM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 8.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -61,6 +61,7 @@ CREATE TABLE `employee_tbl` (
   `Address` text NOT NULL,
   `ContactNos` varchar(25) NOT NULL,
   `EmailAddress` text NOT NULL,
+  `user_type` varchar(50) NOT NULL,
   `username` varchar(250) NOT NULL,
   `Password` varchar(250) NOT NULL,
   `BloodType` varchar(5) NOT NULL
@@ -70,9 +71,9 @@ CREATE TABLE `employee_tbl` (
 -- Dumping data for table `employee_tbl`
 --
 
-INSERT INTO `employee_tbl` (`EncoderID`, `FirstName`, `MidName`, `LastName`, `BirthDate`, `Gender`, `Address`, `ContactNos`, `EmailAddress`, `username`, `Password`, `BloodType`) VALUES
-(2456, 'Christian', 'Genilo', 'Cullados', '2011-05-09', 'male', 'imus cavite', '6787754', 'cgc@gmail.com', '', '', 'o+'),
-(3001, 'Moy', 'Moy', 'Capistrano', '2011-01-31', '', 'Las pinas city', '56441', 'moy@gmail.com', '', '', 'AB-');
+INSERT INTO `employee_tbl` (`EncoderID`, `FirstName`, `MidName`, `LastName`, `BirthDate`, `Gender`, `Address`, `ContactNos`, `EmailAddress`, `user_type`, `username`, `Password`, `BloodType`) VALUES
+(2456, 'Christian', 'Genilo', 'Cullados', '2011-05-09', 'male', 'imus cavite', '6787754', 'cgc@gmail.com', 'admin', 'xtianpuh', '12345678', 'o+'),
+(3001, 'Moy', 'Moy', 'Capistrano', '2011-01-31', '', 'Las pinas city', '56441', 'moy@gmail.com', '', '', '', 'AB-');
 
 -- --------------------------------------------------------
 
