@@ -1,6 +1,22 @@
 <?php
   $Product_ID=$_GET['id'];
   include 'connection.php';
+
+  $query = "SELECT * FROM product_tbl WHERE ProductID = '$Product_ID'";
+  $result = mysqli_query($db, $query);
+  if ($row = mysqli_fetch_array($result))
+    {
+      $Name = $row['ProductName'];
+      $Description = $row['Description'];
+      $Category = $row['Category'];
+      $Status = $row['Status'];
+      $Price = $row['Price'];
+      $Unit = $row['Unit'];
+    }
+
+
+if($_SERVER["REQUEST_METHOD"]=="POST")
+{
    if(isset($_POST['update'])){
       $Name2=$_POST['Name']; 
       $Description2=$_POST['Description']; 
@@ -17,17 +33,24 @@
       }
     } 
 
-  $query = "SELECT * FROM product_tbl WHERE ProductID = '$Product_ID'";
-  $result = mysqli_query($db, $query);
-  if ($row = mysqli_fetch_array($result))
-    {
-      $Name = $row['ProductName'];
-      $Description = $row['Description'];
-      $Category = $row['Category'];
-      $Status = $row['Status'];
-      $Price = $row['Price'];
-      $Unit = $row['Unit'];
-    }
+     else if (isset($_POST['delete'])) {
+
+            $Name2=$_POST['Name']; 
+
+            $sql = "DELETE FROM product_tbl WHERE ProductName = '$Name2'";
+              if($db->query($sql)===TRUE)
+              {
+               echo "<script>alert('Deleted');</script>";
+                echo " <script>window.location.href='http://localhost/Project/1stproject/Producttable.php';</script>";   
+              }
+              else
+              {
+                echo "Error: " . $sql . "<br>" . $db->error;
+              }        
+        
+          }
+
+  }
 ?>
 <!DOCTYPE html>
 <html>
@@ -66,7 +89,7 @@
 <body>
 
 <!----------------Header----------------------------------------------------->
-<form method="post"  enctype="multipart/form-data" >
+
 <nav class="navbar navbar-light  fixed-top " style="background: rgb(126,224,255);
 background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50%, rgba(105,255,203,1) 100%);">
   <div class="container-fluid" >
@@ -234,8 +257,9 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
 
 
     <div class="input-group mb-3">
+<form method="post"  enctype="multipart/form-data" >
      
-      <input type="text" class="form-control" name= "Name" value = "<?php echo $Name ?>"  size="200"  aria-label="Username" aria-describedby="basic-addon1">
+      <input type="text" class="form-control" name="Name" value ="<?php echo $Name ?>"  size="200"  aria-label="Username" aria-describedby="basic-addon1">
 
       
     </div>
@@ -265,7 +289,7 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
   </span>
   <span class="icon-input-btn mt-4">
    <i class="fas fa-trash text-white"></i>
-    <input type="submit" name="" class="btn btn-sm btn-danger text-white " value="DELETE">
+    <input type="submit" name="delete" class="btn btn-sm btn-danger text-white " value="DELETE">
   </span>
 
 

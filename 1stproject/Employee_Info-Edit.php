@@ -1,6 +1,9 @@
 <?php
   $Encoder_ID=$_GET['id'];
   include 'connection.php';
+
+  if($_SERVER["REQUEST_METHOD"]=="POST")
+{
   if(isset($_POST['update'])){
       $FirstName2 = $_POST['FirstName'];
       $MidName2 = $_POST['MidName'];
@@ -20,11 +23,29 @@
       }
     } 
 
+     else if (isset($_POST['delete'])) {
+
+             $email = $_POST['EmailAddress'];
+
+              $sql = "DELETE FROM employee_tbl WHERE EmailAddress = '$email'";
+              if($db->query($sql)===TRUE)
+              {
+               echo "<script>alert('Deleted');</script>";
+                echo " <script>window.location.href='http://localhost/Project/1stproject/employeetable.php';</script>";   
+              }
+              else
+              {
+                echo "Error: " . $sql . "<br>" . $db->error;
+              }        
+          }
+
+  }
+
   $query = "SELECT * FROM employee_tbl WHERE EncoderID = '$Encoder_ID'";
   $result = mysqli_query($db, $query);
   if ($row = mysqli_fetch_array($result))
     {
-      $CustomerName = $row['CustomerName'];
+     
       $FirstName = $row['FirstName'];
       $MidName = $row['MidName'];
       $LastName = $row['LastName'];
@@ -301,7 +322,7 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
                   </span>
                   <span class="icon-input-btn mt-4">
                   <i class="fas fa-trash text-white"></i>
-                    <input type="submit" name="" class="btn btn-danger text-white " value="DELETE">
+                    <input type="submit" name="delete" class="btn btn-danger text-white " value="DELETE">
                   </span>
                 </center>
                 
