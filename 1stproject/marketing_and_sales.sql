@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2021 at 09:20 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.2
+-- Generation Time: Oct 29, 2021 at 03:10 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -42,8 +42,8 @@ CREATE TABLE `customer_tbl` (
 --
 
 INSERT INTO `customer_tbl` (`CustomerID`, `CustomerName`, `OfficeAddress`, `ContactNo`, `EmailAddress`, `CustomerStatus`, `Remarks`) VALUES
-(4357, 'piolo', 'imus cavite', '598871025', 'paul@gmail.com', 'activ', 'good'),
-(4359, 'polmer', 'imus cavite', '598871025', 'paul@gmail.com', 'ok', 'good');
+(4364, 'Chris', 'Manila', '+639785225858', 'cullados@gmial.cpm', 'bad', 'active'),
+(4366, 'Dariel', 'Dasmarinas', '+639661822919', 'Cvusu@cvsu.ph', '', '');
 
 -- --------------------------------------------------------
 
@@ -61,6 +61,7 @@ CREATE TABLE `employee_tbl` (
   `Address` text NOT NULL,
   `ContactNos` varchar(25) NOT NULL,
   `EmailAddress` text NOT NULL,
+  `Password` varchar(250) NOT NULL,
   `BloodType` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -68,9 +69,9 @@ CREATE TABLE `employee_tbl` (
 -- Dumping data for table `employee_tbl`
 --
 
-INSERT INTO `employee_tbl` (`EncoderID`, `FirstName`, `MidName`, `LastName`, `BirthDate`, `Gender`, `Address`, `ContactNos`, `EmailAddress`, `BloodType`) VALUES
-(2456, 'Christian', 'Genilo', 'Cullados', '2011-05-09', 'male', 'imus cavite', '6787754', 'cgc@gmail.com', 'o+'),
-(3001, 'Moy', 'Moy', 'Capistrano', '2011-01-31', 'male', 'Las pinas city', '56441', 'moy@gmail.com', 'AB-');
+INSERT INTO `employee_tbl` (`EncoderID`, `FirstName`, `MidName`, `LastName`, `BirthDate`, `Gender`, `Address`, `ContactNos`, `EmailAddress`, `Password`, `BloodType`) VALUES
+(2456, 'Christian', 'Genilo', 'Cullados', '2011-05-09', 'male', 'imus cavite', '6787754', 'cgc@gmail.com', '', 'o+'),
+(3001, 'Moy', 'Moy', 'Capistrano', '2011-01-31', '', 'Las pinas city', '56441', 'moy@gmail.com', '', 'AB-');
 
 -- --------------------------------------------------------
 
@@ -108,14 +109,6 @@ CREATE TABLE `order_tbl` (
   `EncoderID` bigint(20) NOT NULL,
   `Remarks` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `order_tbl`
---
-
-INSERT INTO `order_tbl` (`OrderID`, `CustomerID`, `OrderDetailsID`, `OrderAmount`, `OrderStatus`, `EncoderID`, `Remarks`) VALUES
-(16871, 4357, 1991, '9750', 'paid', 2456, 'okay!'),
-(16872, 4357, 1991, '19', 'paid', 3001, 'good');
 
 -- --------------------------------------------------------
 
@@ -216,7 +209,7 @@ ALTER TABLE `suppliers_tbl`
 -- AUTO_INCREMENT for table `customer_tbl`
 --
 ALTER TABLE `customer_tbl`
-  MODIFY `CustomerID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4360;
+  MODIFY `CustomerID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4367;
 
 --
 -- AUTO_INCREMENT for table `employee_tbl`

@@ -192,7 +192,7 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
 <br><br>
 
 <div class="container container1">
-
+          
   
 
 
@@ -210,28 +210,114 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
 
 
             <div class="p-3 py-4">
+              <?php 
+                $customerID=$_GET['customerid'];
+                include 'connection.php';
+               
+
+                $query = "SELECT * FROM customer_tbl WHERE CustomerID = '$customerID'";
+                $result = mysqli_query($db, $query);
+                if ($row = mysqli_fetch_array($result))
+                  {
+                    $CustomerName= $row['CustomerName'];               
+                    $Address = $row['OfficeAddress'];
+                    $EmailAddress = $row['EmailAddress'];
+                    $Contact = $row['ContactNo'];
+                    $Status = $row['CustomerStatus'];
+                    $Remark = $row['Remarks'];
+
+    }
+
+    if($_SERVER["REQUEST_METHOD"]=="POST")
+{
+
+          if (isset($_POST['update'])) {
+           
+                    $name= $_POST['cname'];               
+                    $O_address = $_POST['address'];
+                    $email = $_POST['email'];
+                    $contact = $_POST['contact'];
+                    $status = $_POST['status'];
+                    $c_remark = $_POST['remark'];
+
+                    $u_sql ="UPDATE customer_tbl SET 
+                    CustomerName = '$name',
+                    OfficeAddress ='$O_address',
+                    ContactNo ='$contact',
+                    EmailAddress ='$email',
+                    CustomerStatus ='$status',
+                    Remarks ='$c_remark' 
+                    WHERE CustomerID = '$customerID'";
+
+              $u_result = mysqli_query($db, $u_sql);
+              if ($u_result) {
+
+                echo "<script>alert('Updated');</script>";
+                echo " <script>window.location.replace('http://localhost/Project/1stproject/customertable.php');</script>";
+                
+                
+              }
+
+
+
+          }
+          else if (isset($_POST['delete'])) {
+
+             $Cname = $_POST['cname'];
+
+              $sql = "DELETE FROM customer_tbl WHERE CustomerName = '$Cname'";
+              if($db->query($sql)===TRUE)
+              {
+               echo "<script>alert('Deleted');</script>";
+                echo " <script>window.location.href='http://localhost/Project/1stproject/customertable.php';</script>";   
+              }
+              else
+              {
+                echo "Error: " . $sql . "<br>" . $db->error;
+              }        
+          }
+        }
+        ?>
 
                     
                     <div class="p-3 bg-light fw-bold text-black"><i class="fas fa-info-circle mr-1"></i> CUSTOMER UPDATE</div>
 
-              
+              <form method="POST">
                 <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Customer Name</label><input type="text" class="form-control" name="" placeholder="name" value=""></div>
+                    <div class="col-md-6">
+                      <label class="labels">Customer Name</label>
+                      <input type="text" class="form-control" name="cname" placeholder="name" value="<?php echo "$CustomerName"; ?>">
+                    </div>
 
 
                 </div>
                 <div class="row mt-3">
                     
-                    <div class="col-md-12"><label class="labels">Contact Number</label><input type="text" name="" class="form-control" placeholder="enter contact number" value=""></div>
+                    <div class="col-md-12">
+                      <label class="labels">Contact Number</label>
+                      <input type="text" name="contact" class="form-control" placeholder="enter contact number" maxlength="13" value="<?php echo "$Contact"; ?>">
+                    </div>
                     
-                    <div class="col-md-12"><label class="labels">Address </label><input type="text" class="form-control" name="" placeholder="enter address line " value=""></div>
+                    <div class="col-md-12">
+                      <label class="labels">Address </label>
+                      <input type="text" class="form-control" name="address" placeholder="enter address line " value="<?php echo "$Address"; ?>">
+                    </div>
                                       
                                   
-                    <div class="col-md-12"><label class="labels">Email Address</label><input type="text" class="form-control" name="" placeholder="enter email id" value=""></div>
+                    <div class="col-md-12">
+                      <label class="labels">Email Address</label>
+                      <input type="text" class="form-control" name="email" placeholder="enter email id" value="<?php echo "$EmailAddress"; ?>">
+                    </div>
 
-                    <div class="col-md-12"><label class="labels">Status</label><input type="text" class="form-control" name="" placeholder="customer status" value=""></div>
+                    <div class="col-md-12">
+                      <label class="labels">Status</label>
+                      <input type="text" class="form-control" name="status" placeholder="customer status" value="<?php echo "$Status"; ?>">
+                    </div>
 
-                    <div class="col-md-12"><label class="labels">Remarks</label><input type="text" class="form-control" name="" placeholder="customer remarks" value=""></div>
+                    <div class="col-md-12">
+                      <label class="labels">Remarks</label>
+                      <input type="text" class="form-control" name="remark" placeholder="customer remarks" value="<?php echo "$Remark"; ?>">
+                    </div>
 
 
                     
@@ -245,14 +331,15 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
                 <center>
                   <span class="icon-input-btn mt-5">
                     <i class="fas fa-file-upload text-white"></i> 
-                    <input type="submit" name="" class="btn btn1  text-white " value="UPDATE">
+                    <input type="submit" name="update" class="btn btn1  text-white " value="UPDATE">
                   </span>
                   <span class="icon-input-btn mt-4">
                   <i class="fas fa-trash text-white"></i>
-                    <input type="submit" name="" class="btn btn-danger text-white " value="DELETE">
+                    <input type="submit" name="delete" class="btn btn-danger text-white " value="DELETE">
                   </span>
                 </center>
-                
+
+                </form>
             </div>
 
             <div style="margin-top: 10px; margin-bottom: 15PX;">

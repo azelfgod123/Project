@@ -214,22 +214,58 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
                     
                     <div class="p-3 bg-light fw-bold text-black"><i class="fas fa-info-circle mr-1"></i> INSERTING NEW CUSTOMER</div>
 
-              
+                    <?php
+
+                    include 'connection.php';
+
+                    if (isset($_POST['insert'])) {
+
+                     $customer = $_POST['cname'];
+                     $contact = $_POST['contact'];
+                     $address = $_POST['address'];
+                     $emailaddress = $_POST['email'];
+
+
+                     $sql = "INSERT INTO customer_tbl ( CustomerName, OfficeAddress, ContactNo, EmailAddress) VALUES ('$customer','$address','$contact','$emailaddress')";
+                     $result = mysqli_query($db, $sql);
+                     if ($result) {
+                      echo "New Inserted Data";
+                     }
+                    }
+
+                  
+
+
+
+
+
+                    ?>
+
+                    <form method="POST">
                 <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Customer Name</label><input type="text" class="form-control" name="" placeholder="Name" value=""></div>
-
-
+                    <div class="col-md-6">
+                      <label class="labels">Customer Name</label>
+                      <input type="text" class="form-control" name="cname" placeholder="Name" value="" required>
+                    </div>
                 </div>
+
                 <div class="row mt-3">
                     
-                    <div class="col-md-12"><label class="labels">Contact Number</label><input type="text" name="" class="form-control" placeholder="Enter contact number" value=""></div>
+                    <div class="col-md-12">
+                      <label class="labels">Contact Number</label>
+                      <input type="text" name="contact" maxlength="13" class="form-control" placeholder="Enter contact number" value="+63" required>
+                    </div>
                     
-                    <div class="col-md-12"><label class="labels">Address </label><input type="text" class="form-control" name="" placeholder="Enter address line " value=""></div>
+                    <div class="col-md-12">
+                      <label class="labels">Address </label>
+                      <input type="text" class="form-control" name="address" placeholder="Enter address line " value="" required>
+                    </div>
                                       
                                   
-                    <div class="col-md-12"><label class="labels">Email Address</label><input type="text" class="form-control" name="" placeholder="enter email id" value=""></div>
-
-
+                    <div class="col-md-12">
+                      <label class="labels">Email Address</label>
+                      <input type="email" class="form-control" name="email" placeholder="enter email id" value="" required>
+                    </div>
                     
                 </div>
                 <div class="row mt-3">
@@ -241,9 +277,10 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
                 <center>
                   <span class="icon-input-btn mt-5">
                     <i class="fas fa-file-upload text-white"></i> 
-                    <input type="submit" name="" class="btn btn1  text-white " value="SAVE">
+                    <input type="submit" name="insert" class="btn btn1  text-white " value="SAVE">
                   </span>
                 </center>
+                </form>
                 
             </div>
 
