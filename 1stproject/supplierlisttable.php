@@ -15,6 +15,9 @@
 
 <script src="https://kit.fontawesome.com/ab7a215c3c.js" crossorigin="anonymous"></script>
 
+<script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.js"></script>
+
 <!----------------------------------------------->
 
 <style>
@@ -228,6 +231,15 @@ table .lock{
 
 </style>
 
+
+<!----------ITO ANG LINK nagagamitin sa table ----
+
+
+http://localhost/Project/1stproject/Supplier_Info-Edit.php
+
+
+-------------------->
+
 <script>
   
   $(document).ready(function(){
@@ -402,7 +414,7 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
 </nav>
     </div>
       <div class="mx-3">
-        <a href="#" style="text-decoration: none;"><div class="wrap"><button class="button">ADD SUPPLIER</button></div>
+        <a href="Supplier_Insert.php" style="text-decoration: none;"><div class="wrap"><button class="button">ADD SUPPLIER</button></div>
           </a>
       </div>
 

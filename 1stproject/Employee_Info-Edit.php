@@ -255,10 +255,28 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
             <div class="p-3 py-4">
 
                     
-                    <div class="p-3 bg-light fw-bold text-black"><i class="fas fa-info-circle mr-1"></i> EMPLOYEE UPDATE</div>
+                    <div class="p-3 bg-light fw-bold text-black"><i class="fas fa-info-circle mr-1"></i> EMPLOYEE INFORMATION</div>
 
               
                 <div class="row mt-2">
+
+                <div class="col-md-6"><label class="labels">Username</label><input type="text" class="form-control" name="" placeholder="Username" value=""></div>
+
+                  <div class="col-md-6"><label class="labels">Password</label><input type="password" class="form-control" name="" placeholder="Password" value=""></div>
+
+                  <div class="col-md-6"><label class="labels">User type</label>
+
+                          <select class="form-select form-control" name="" >
+                          <option value=''>-- select one --</option>
+                          <option value="Admin">Admin</option>
+                          <option value="Employee">Employee</option>
+                          </select>
+
+                    </div>
+
+
+                  <hr  class="mt-3">
+
                     <div class="col-md-6"><label class="labels">First Name</label><input type="text" class="form-control" name="FirstName" placeholder="first name" value = "<?php echo $FirstName ?>"></div>
 
                     <div class="col-md-6"><label class="labels">Middle Name</label><input type="text" class="form-control" name="MidName" value = "<?php echo $MidName ?>" placeholder="middle name"></div>
