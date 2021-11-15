@@ -211,7 +211,7 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
                      $sql = "INSERT INTO customer_tbl ( CustomerName, OfficeAddress, ContactNo, EmailAddress) VALUES ('$customer','$address','$contact','$emailaddress')";
                      $result = mysqli_query($db, $sql);
                      if ($result) {
-                      echo " <script>window.location.replace('http://localhost/Project/1stproject/customertable.php');</script>";
+                      echo " <script>window.location.replace('customertable.php');</script>";
                      }
                     }
 

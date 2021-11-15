@@ -237,7 +237,7 @@ table .lock{
   $(document).ready(function(){
   $('table tr').click(function(){
     var id = $(this).attr('row_id');
-    window.location.href='http://localhost/Project/1stproject/product_Info-Edit.php?id=' + id;
+    window.location.href='product_Info-Edit.php?id=' + id;
   });
 }); 
 

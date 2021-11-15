@@ -235,7 +235,7 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
               if ($u_result) {
 
                 echo "<script>alert('Updated');</script>";
-                echo " <script>window.location.replace('http://localhost/Project/1stproject/customertable.php');</script>";
+                echo " <script>window.location.replace('customertable.php');</script>";
                 
                 
               }
@@ -251,7 +251,7 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
               if($db->query($sql)===TRUE)
               {
                echo "<script>alert('Deleted');</script>";
-                echo " <script>window.location.href='http://localhost/Project/1stproject/customertable.php';</script>";   
+                echo " <script>window.location.href='customertable.php';</script>";   
               }
               else
               {

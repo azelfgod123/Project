@@ -236,7 +236,7 @@ table .lock{
   $(document).ready(function(){
   $('table tr').click(function(){
     var id = $(this).attr('row_id');
-        window.open("http://localhost/Project/1stproject/Employee_Info-Edit.php?id=" + id );
+        window.open("Employee_Info-Edit.php?id=" + id );
   });
 }); 
 
