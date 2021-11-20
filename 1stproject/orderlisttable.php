@@ -17,6 +17,8 @@
 <!----------------------------------------------->
 
 <style>
+ 
+
 table .lock{
     cursor: not-allowed;
   }
@@ -385,8 +387,9 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
 
 </div>
 
-<div class="container">
 
+<div class="container">
+<hr class="hr mt-4">
       
       
 
