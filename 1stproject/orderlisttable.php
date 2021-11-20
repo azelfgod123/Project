@@ -400,8 +400,13 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
    <input type="search" id = "search" class="firstname text text-box">
           <button onclick ="search()" onkeyup="search()" onchange="search()" class="btn btn-primary">Search</button>
 </nav>
+  
     </div>
-   
+    <div class="mx-3">
+        <a href="orderlist_insert.php" style="text-decoration: none;"><div class="wrap"><button class="button">NEW ORDER</button></div>
+          </a>
+      </div>
+
 
   </div>
 
