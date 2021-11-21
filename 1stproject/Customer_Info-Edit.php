@@ -293,7 +293,11 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
 
                     <div class="col-md-12">
                       <label class="labels">Status</label>
-                      <input type="text" class="form-control" name="status" placeholder="customer status" value="<?php echo "$Status"; ?>">
+                      <select class="form-select form-control" name="status" >
+                        <option  value=""><?php echo "$Status"; ?> </option>
+                        <option  value="Active">Active</option>
+                        <option  value="Inactive">Inactive</option>
+                      </select>
                     </div>
 
                     <div class="col-md-12">

@@ -316,8 +316,12 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
 
              <div class="input-group ">
      
-              <input type="text" class="form-control" name= "Category" value = "<?php echo $Category ?>"  size="200"  aria-label="Username" aria-describedby="basic-addon1">
-
+             <select class="form-select form-control" name="Category" >
+              <option  value=""><?php echo "$Category"; ?> </option>
+              <option  value="Appliances">Appliances</option>
+              <option  value="Furniture">Furniture</option>
+              <option  value="Kitchenware">Kitchenware</option>
+            </select>
               
             </div>
 
@@ -332,8 +336,11 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
 
              <div class="input-group ">
      
-              <input type="text" class="form-control" name= "Status" value = "<?php echo $Status ?>"  size="200"  aria-label="Username" aria-describedby="basic-addon1">
-
+            <select class="form-select form-control" name="Status" >
+                        <option  value=""><?php echo "$Status"; ?> </option>
+                        <option  value="Available">Available</option>
+                        <option  value="Out of stock">Out of stock</option>
+            </select>
               
             </div>
 
