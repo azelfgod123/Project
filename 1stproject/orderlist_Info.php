@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Order Product</title>
+	<title>Order Info</title>
   <link rel="shortcut icon" type="image/png" href="MainIcon/accusoft-brands.png">
 </head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -88,11 +88,10 @@
     
     
 }
-.box-drop{
-  width: 170px;
-  font-size: x-small;
+.txt-box{
+  cursor: none;
+  border: none;
 }
-
     .icon-input-btn{
         display: inline-block;
         position: relative;
@@ -244,71 +243,49 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
 
   <div class="product_container">
  
-  <div class="p-3 mt-4 bg-light fw-bold text-black text-uppercase"><i class="fas fa-info-circle mr-1"></i> Product</div> 
-
-  <div class="container mt-4 mb-2 drop0">
-
-<div class="drop1"><label class="labels">New Order*</label></div>
-
-<div class="drop2">
-<select class="form-select form-control box-drop" name="" >
- <option   value=''>-- SELECT PRODUCT --</option>
- <option  value="">NAME NG PRODUCT</option>
- 
- </select>
-</div>
-
-<div class="drop3">
-
-    <label class="labels card-text quan">Quantity</label>
+  <div class="p-3 mt-4 bg-light fw-bold text-black text-uppercase"><i class="fas fa-info-circle mr-1"></i> Product Info</div> 
 
 
-</div>
-<div class="drop4">
-<input type="number" min = "1" aria-label="" class="form-control drop-text drop-down" name = "" required>
-</div>
+  <div class="mt-2  col-md-12"><label class="labels">Product Name:</label><input type="text" class="form-control txt-box" name=""  value="" disabled></div>
+
+  <div class="mt-2  col-md-12"><label class="labels">Product Quantity:</label><input type="text" class="form-control txt-box" name=""  value="" disabled></div>
 
 
+<div class="mt-2  col-md-12"><label class="labels">Product Price:</label><input type="text" class="form-control txt-box" name=""  value="" disabled></div>
 
-</div>
-
-<div class="mt-2  col-md-12"><label class="labels">Product Price:</label><input type="text" class="form-control" name=""  value=""></div>
-
-<div class="mt-2  col-md-12"><label class="labels">Product Category:</label><input type="text" class="form-control" name=""  value=""></div>
+<div class="mt-2  col-md-12"><label class="labels">Product Category:</label><input type="text" class="form-control txt-box" name=""  value="" disabled></div>
 
 
-<div class="mt-2 mb-2  col-md-12"><label class="labels">Product Status:</label><input type="text" class="form-control" name=""  value=""></div>
+<div class="mt-2 mb-2  col-md-12"><label class="labels">Product Status:</label><input type="text" class="form-control txt-box" name=""  value="" disabled></div>
 
 
 <span class="text  text-black" style="font-size: 13px;">Description <i class="fas fa-asterisk text-info" style="font-size: 10px;"></i></span>
     <div class="input-group">
      
-      <textarea class="form-control mt-1" name= "Description" placeholder="Description" aria-label="With textarea"></textarea>
+      <textarea class="form-control mt-1 txt-box" name= "Description" placeholder="Description" aria-label="With textarea" disabled></textarea>
   </div>
 
 
 
   
-                  <div class="p-3 mt-4 bg-light fw-bold text-black text-uppercase"><i class="fas fa-info-circle mr-1"></i> Fill the Requirement</div>       
+                  <div class="p-3 mt-4 bg-light fw-bold text-black text-uppercase"><i class="fas fa-info-circle mr-1"></i> Customer Info</div>       
 
-                  <div class="mt-2 col-md-12"><label class="labels">Customer Name:</label><input type="text" class="form-control" name="" placeholder="enter full name" value=""></div>
+                  <div class="mt-2 col-md-12"><label class="labels">Customer Name:</label><input type="text" class="form-control txt-box" name=""  value="" disabled></div>
 
-                  <div class="mt-2 col-md-12"><label class="labels">Customer Mobile #:</label><input type="text" class="form-control" name="" placeholder="enter mobile #" value=""></div>
+                  <div class="mt-2 col-md-12"><label class="labels">Customer Mobile #:</label><input type="text" class="form-control txt-box" name=""  value="" disabled></div>
 
                 
-                  <div class="mt-2 col-md-12"><label class="labels">Customer Address House# brgy:</label><input type="text" class="form-control" name="" placeholder="enter full address" value=""></div>
+                  <div class="mt-2 col-md-12"><label class="labels">Customer Address House# brgy:</label><input type="text" class="form-control txt-box" name=""  value="" disabled></div>
 
-                  <div class="mt-2 col-md-12"><label class="labels">Customer Address City | Municipality:</label><input type="text" class="form-control" name="" placeholder="enter full address" value=""></div>
+                  <div class="mt-2 col-md-12"><label class="labels">Customer Address City | Municipality:</label><input type="text" class="form-control txt-box" name=""  value="" disabled></div>
 
-                  <div class="mt-2 col-md-12"><label class="labels">Customer Address Province:</label><input type="text" class="form-control" name="" placeholder="enter full address" value=""></div>
+                  <div class="mt-2 col-md-12"><label class="labels">Customer Address Province:</label><input type="text" class="form-control txt-box" name=""  value="" disabled></div>
 
 
 
                 <div class="ex100">
 
-                <span class="icon-input-btn mt-4 btnnnn ">
-                    <button class="btn10 "> New Order </button>
-                  </span>
+           
                   
 
                 </div>  
