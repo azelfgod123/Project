@@ -245,9 +245,9 @@ http://localhost/Project/1stproject/Supplier_Info-Edit.php
   $(document).ready(function(){
   $('table tr').click(function(){
     var id = $(this).attr('row_id');
-    var id2 = $(this).attr('row_id2');
-    window.open("Supplier_Info-Edit.php?id=" + id + "&Acc_ID=" + id2);
-  });
+  
+    window.open("Supplier_Info-Edit.php?supplierid=" + id);
+  });D
 }); 
 
 

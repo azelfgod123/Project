@@ -196,13 +196,85 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
                     
                     <div class="p-3 bg-light fw-bold text-black"><i class="fas fa-info-circle mr-1"></i> SUPPLIER INFORMATION</div>
 
+                     <?php 
+                $supplierID=$_GET['supplierid'];
+                include 'connection.php';
+               
+
+                $query = "SELECT * FROM suppliers_tbl WHERE RecordID = '$supplierID'";
+                $result = mysqli_query($db, $query);
+                if ($row = mysqli_fetch_array($result))
+                  {
+                    $SupplierName= $row['SupplierName'];               
+                    $Address = $row['Address'];
+                    $Email = $row['EmailAddress'];
+                    $Contact = $row['ContactNos'];
+                    $Contact_Person = $row['ContactPerson'];
+                    $Remark = $row['Remarks'];
+
+    }
+
+    if($_SERVER["REQUEST_METHOD"]=="POST")
+{
+
+          if (isset($_POST['update'])) {
+           
+                    $name= $_POST['cname'];               
+                    $address = $_POST['address'];
+                    $email = $_POST['email'];
+                    $contact = $_POST['contact'];
+                    $cperson = $_POST['cperson'];
+                    $s_remark = $_POST['remark'];
+
+                    $u_sql =" UPDATE suppliers_tbl SET 
+                    SupplierName='$name',
+                    Address='$address',
+                    ContactPerson='$cperson',
+                    ContactNos='$contact',
+                    EmailAddress='$email',
+                    Remarks='$s_remark' 
+                    WHERE RecordID = $supplierID";
+
+              $u_result = mysqli_query($db, $u_sql);
+              if ($u_result) {
+
+                echo "<script>alert('Updated');</script>";
+                echo " <script>window.location.replace('supplierlisttable.php');</script>";
+                
+                
+              }
+
+
+
+          }
+          else if (isset($_POST['delete'])) {
+
+             $Cname = $_POST['cname'];
+
+              $sql = "DELETE FROM suppliers_tbl WHERE SupplierName = '$Cname'";
+              if($db->query($sql)===TRUE)
+              {
+               echo "<script>alert('Deleted');</script>";
+                echo " <script>window.location.href='supplierlisttable.php';</script>";   
+              }
+              else
+              {
+                echo "Error: " . $sql . "<br>" . $db->error;
+              }        
+          }
+        }
+        ?>
+
+            <form method="POST">
+              
+        
                    
 
                 
                 <div class="row mt-2">
                     <div class="col-md-6">
                       <label class="labels">Supplier Name</label>
-                      <input type="text" class="form-control" name="cname" placeholder="Name" value="" required>
+                      <input type="text" class="form-control" name="cname" placeholder="Name" value="<?php echo $SupplierName;?>" required>
                     </div>
                 </div>
 
@@ -210,29 +282,29 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
 
                 <div class="col-md-12">
                       <label class="labels">Contact Person</label>
-                      <input type="text" class="form-control" name="" placeholder="Contact Person " value="" required>
+                      <input type="text" class="form-control" name="cperson" placeholder="Contact Person " value="<?php echo $Contact_Person;?>" required>
                     </div>
                     
                     
                     <div class="col-md-12">
                       <label class="labels">Contact Number</label>
-                      <input type="text" name="contact" maxlength="13" class="form-control" placeholder="Enter contact number" value="+63" required>
+                      <input type="text" name="contact" maxlength="13" class="form-control" placeholder="Enter contact number" value="<?php echo $Contact;?>" required>
                     </div>
                     
                     <div class="col-md-12">
                       <label class="labels">Address </label>
-                      <input type="text" class="form-control" name="address" placeholder="Enter address line " value="" required>
+                      <input type="text" class="form-control" name="address" placeholder="Enter address line " value="<?php echo $Address;?>" required>
                     </div>
                                       
                                   
                     <div class="col-md-12">
                       <label class="labels">Email Address</label>
-                      <input type="email" class="form-control" name="email" placeholder="enter email id" value="" required>
+                      <input type="email" class="form-control" name="email" placeholder="Enter E-mail Address" value="<?php echo $Email;?>" required>
                     </div>
 
                     <div class="col-md-12">
                       <label class="labels">Remarks</label>
-                      <input type="email" class="form-control" name="" placeholder="remarks" value="" required>
+                      <input type="text" class="form-control" name="remark" placeholder="remarks" value="<?php echo $Remark;?>" required>
                     </div>
                     
                 </div>
