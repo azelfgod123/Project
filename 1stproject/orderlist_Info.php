@@ -245,7 +245,7 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
  
   <div class="p-3 mt-4 bg-light fw-bold text-black text-uppercase"><i class="fas fa-info-circle mr-1"></i> Product Info</div> 
 
-
+  
   <div class="mt-2  col-md-12"><label class="labels">Product Name:</label><input type="text" class="form-control txt-box" name=""  value="" disabled></div>
 
   <div class="mt-2  col-md-12"><label class="labels">Product Quantity:</label><input type="text" class="form-control txt-box" name=""  value="" disabled></div>

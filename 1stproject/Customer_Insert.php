@@ -214,13 +214,6 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
                       echo " <script>window.location.replace('customertable.php');</script>";
                      }
                     }
-
-                  
-
-
-
-
-
                     ?>
 
                     <form method="POST">

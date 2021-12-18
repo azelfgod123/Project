@@ -246,6 +246,15 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
  
   <div class="p-3 mt-4 bg-light fw-bold text-black text-uppercase"><i class="fas fa-info-circle mr-1"></i> Product</div> 
 
+  <?php 
+  include 'connection.php';
+
+
+
+
+
+   ?>
+<form method="POST">
   <div class="container mt-4 mb-2 drop0">
 
 <div class="drop1"><label class="labels">New Order*</label></div>
@@ -253,7 +262,22 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
 <div class="drop2">
 <select class="form-select form-control box-drop" name="" >
  <option   value=''>-- SELECT PRODUCT --</option>
- <option  value="">NAME NG PRODUCT</option>
+ <?php  
+
+ $select_sql = "SELECT * FROM product_tbl";
+ $result = mysqli_query($db,$select_sql);
+  if($result->num_rows>0){
+ while ($row=$result->fetch_assoc()) {
+
+  $Pname = $row['ProductName'];
+  $Desc = $row['Description'];
+
+   echo "<option  value='$Pname'>$Pname</option>";
+ }
+}
+
+ ?>
+ 
  
  </select>
 </div>
@@ -309,6 +333,8 @@ background: linear-gradient(90deg, rgba(126,224,255,1) 0%, rgba(66,224,233,1) 50
                 <span class="icon-input-btn mt-4 btnnnn ">
                     <button class="btn10 "> New Order </button>
                   </span>
+
+                  </form>
                   
 
                 </div>  
